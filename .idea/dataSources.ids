@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails Judicatum: test" uuid="23da7e58-f613-40f4-aa67-d02620cf0a77">
+    <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="judicatum_test"/>
+    </database-model>
+  </data-source>
+  <data-source name="Rails Judicatum: production" uuid="ed4311c4-af4b-447b-b9df-1ff0222a28fc">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails Judicatum: development" uuid="7f8c47ed-af65-4270-8730-7404eb420221">
+    <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="judicatum_development"/>
+      <table id="2" parent="1" name="schema_migrations"/>
+      <table id="3" parent="1" name="users"/>
+      <table id="4" parent="1" name="problemsets"/>
+      <table id="5" parent="1" name="solutions"/>
+      <column id="6" parent="2" name="version">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="7" parent="2" name="unique_schema_migrations">
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="8" parent="2" name="unique_schema_migrations">
+        <columns>version</columns>
+        <underlying-index>unique_schema_migrations</underlying-index>
+      </key>
+      <column id="9" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="3" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="11" parent="3" name="encrypted_password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="12" parent="3" name="role">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="13" parent="3" name="created_at">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="14" parent="3" name="updated_at">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="15" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="16" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="4" name="problem">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="18" parent="4" name="attachment">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="19" parent="4" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="20" parent="4" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="21" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="22" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="23" parent="5" name="problem">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="24" parent="5" name="attachment">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="25" parent="5" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="26" parent="5" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="27" parent="5" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="28" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

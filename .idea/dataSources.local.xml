@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails Judicatum: test" uuid="23da7e58-f613-40f4-aa67-d02620cf0a77">
+      <user-name>root</user-name>
+      <schema-pattern>judicatum_test.*</schema-pattern>
+      <default-schemas>judicatum_test.*</default-schemas>
+    </data-source>
+    <data-source name="Rails Judicatum: production" uuid="ed4311c4-af4b-447b-b9df-1ff0222a28fc">
+      <first-sync>true</first-sync>
+      <user-name>Judicatum</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe0dfffdfeedfe3dfe9dfebdffedfffdfe7dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails Judicatum: development" uuid="7f8c47ed-af65-4270-8730-7404eb420221">
+      <user-name>root</user-name>
+      <schema-pattern>judicatum_development.*</schema-pattern>
+      <default-schemas>judicatum_development.*</default-schemas>
+    </data-source>
+  </component>
+</project>

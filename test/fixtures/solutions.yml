@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  [problem: MyString
+  attachment: MyString
+  username: 
+
+two:
+  [problem: MyString
+  attachment: MyString
+  username: 

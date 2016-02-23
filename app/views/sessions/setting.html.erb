@@ -1,0 +1,8 @@
+<h1>Solution submit</h1>
+
+  <%= form_for(:user, :url => {:controller => 'sessions', :action => 'setting'}) do |f| %>
+    <p> Select your OS<br><%= f.select :os, options_for_select([["Windows", "w"], ["Linux", "L"]]) %> </p>
+    <p> Problem #TODO ComboBox, kinda requires problem db up and running <br> <%= f.text_field :problem%> </p>
+    <p> Code<br><%= f.text_area :code, size: "30x10" %> </p>
+  <%= f.submit :submit %>
+  <% end %>

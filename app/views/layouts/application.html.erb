@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Judicatum</title>
+
+</head>
+<body>
+<div class="Main_Header">
+  <h1><% if @current_user != nil  %>
+    <%= @current_user.username.to_s %>
+    <% else %>
+    <%= "Welcome" %>
+    <%end %>
+  </h1>
+  <%unless session[:user_id]%>
+      <ul class="nav">
+        <li><%= link_to :Signup , :signup, class: "nav_links"%></li>
+        <li><%= link_to :Login , :login, class: "nav_links"%></li>
+      </ul>
+  <%else%>
+      <ul class="nav">
+        <li><%= link_to :Home , :home, class: "nav_links" %> </li>
+        <li><%= link_to :Profile , :profile, class: "nav_links" %> </li>
+        <li><%= link_to "Solution upload" , :setting, class: "nav_links" %> </li>
+        <li><%= link_to :Logout , :logout, class: "nav_links" %> </li>
+        <%  if @current_user.role == "admin"  %>
+        <li><%= link_to :Admin, :admin, class: "nav_links" %> </li>
+
+        <% end %>
+
+      </ul>
+  <%end%>
+</div>
+<% if flash[:color]== "valid" %>
+    <div class="valid_notice">
+      <p><%= flash[:notice]%></p>
+    </div>
+<% elsif flash[:color]== "invalid"%>
+    <div class="invalid_notice">
+      <p><%=flash[:notice]%></p>
+    </div>
+<%else%>
+    <div class="notice">
+      <p><%=flash[:notice]%></p>
+    </div>
+<%end%>
+<%= yield %>
+
+</body>
+</html>
