@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   match "profile", :to => "sessions#profile", via: [:get, :post]
   match "setting", :to => "sessions#setting", via: [:get, :post]
   match "login_attempt", :to => "sessions#login_attempt", via: [:get, :post]
+  match "create_prob", :to => "sessions#create_prob", via: [:get, :post]
+  match "create_subl", :to => "sessions#create_subl", via: [:get, :post]
+  match "judge", :to => "sessions#judge", via: [:get,:post]
+  match "poke_jenkins", :to => "sessions#poke_jenkins", via: [:get,:post]
   match "admin", :to => "sessions#admin", via: [:get, :post]
   match "" , :to => "sessions#home", via: [:get, :post]
  # get 'sessions/home,'

@@ -1,7 +1,7 @@
 class CreateProblemsets < ActiveRecord::Migration
   def change
     create_table :problemsets do |t|
-      t.string :problem
+      t.integer :problem
       t.string :attachment
 
       t.timestamps null: false

@@ -1,18 +1,26 @@
 <% @page_title = "UserAuth | Signup" %>
-<div class="Sign_Form">
-  <h1>Sign Up</h1>
-  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-      <p> Username:</br> <%= f.text_field :username%> </p>
+<div style="padding-top: 100px; padding-bottom: 200px;">
+  <div class= "Sign_Form login-div " >
+    <h1 style="padding-bottom: 50px" >Sign Up</h1>
+    <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+        <p> <h4 class="login-text">Username:</h4> <%= f.text_field :username, class:'form-control login-input' %> </p>
 
-      <p> Password:</br> <%= f.password_field :password%></p>
-      <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-      <%= f.submit :Signup %>
-  <% end %>
-  <% if @user.errors.any? %>
-      <ul class="Signup_Errors">
-        <% for message_error in @user.errors.full_messages %>
-            <li>* <%= message_error %></li>
-        <% end %>
-      </ul>
-  <% end %>
+        <p> <h4 class="login-text">Password: </h4> <%= f.password_field :password , class:'form-control login-input' %></p>
+        <p> <h4 class="login-text">Password Confirmation: </h4> <%= f.password_field :password_confirmation , class:'form-control login-input'%> </p>
+        <div  class=" login-btn">
+          <%= f.submit :Signup, class: "btn btn-default btn-color" %>
+        </div>
+    <% end %>
+    <% if @user.errors.any? %>
+        <ul class="Signup_Errors">
+          <% for message_error in @user.errors.full_messages %>
+              <li>* <%= message_error %></li>
+          <% end %>
+        </ul>
+    <% end %>
+  </div>
 </div>
+
+
+
+

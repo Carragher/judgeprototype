@@ -5,6 +5,8 @@ class CreateSolutions < ActiveRecord::Migration
       t.string :attachment
       t.string :username
 
+
+
       t.timestamps null: false
     end
   end

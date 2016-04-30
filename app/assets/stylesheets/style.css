@@ -1,0 +1,118 @@
+
+.header-buttons{
+    float: right;
+}
+
+.navbar-btn {
+    display: inline;
+}
+
+.col-md-2{
+    width: auto;
+}
+
+.btn-color{
+    color: #C36A2D;
+}
+
+.btn-color:hover{
+    color: #331E56;
+    background: #C36A2D;
+}
+
+.rounded-corners-header{
+    border-radius: 25px 25px 0px 0px;
+}
+.rounded-corners{
+    border-radius: 25px
+}
+
+.login-div{
+    text-align: center;
+    padding: 30px;
+    background: #331E56;
+    width: 30%;
+    margin: auto;
+    color: #C36A2D;
+    border-radius: 25px;
+}
+
+.panel-default > .panel-heading{
+    background-color: #C36A2D;
+    color: #331E56;
+    border-color: #C36A2D;
+}
+
+.navbar-default{
+    background: #331E56;
+    color: #C36A2D;
+}
+
+.panel-default{
+    background: #331E56;
+    color: #C36A2D;
+}
+
+.login-input{
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+.login-text{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.login-btn {
+    padding-top: 20px;
+}
+
+.problems-main-title{
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 30px;
+
+}
+
+.problems-div{
+    width: 75%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.in-line{
+    display: inline;
+    white-space: pre-wrap;
+    margin: inherit;
+}
+
+.sub-icon{
+    font-size: 30px;
+    float:right;
+}
+
+.fa-check{
+    color: green;
+}
+
+.fa-times{
+    color: red;
+}
+
+.submit-div{
+    text-align: center;
+    padding: 30px;
+    background: #331E56;
+    width: 50%;
+    margin: auto;
+    color: #C36A2D;
+    border-radius: 25px;
+
+}
+
+.submit-textarea{
+
+    max-width: 892px;
+
+}

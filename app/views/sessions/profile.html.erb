@@ -1,1 +1,37 @@
-<h2 class='User_Header'> <%=@current_user.username%> Profile <h2>
+<h1 class='User_Header problems-main-title'> <%=@current_user.username + "'s"%> Profile and Submission's page </h1>
+
+<div class="problems-div">
+
+  <%subls = Submission.all    %>
+
+  <%i = subls.size %>
+  <%x = 0%>
+  <% while x< i  %>
+
+        <%if @current_user.id == subls[x].userId %>
+
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="col-md-6">
+                <h4>Submission ID: <%=subls[x].id.to_s%> </h4>
+                 <h4 style="display: inline"> Problem: <%=subls[x].problemId.to_s%></h4>
+              </div>
+              <div class="col-md-6">
+
+                <%if subls[x].result == "waiting for judgement" %>
+                    <i class="fa fa-hourglass-half sub-icon"></i>
+                <%elsif subls[x].result == "success"%>
+                    <i class="fa fa-check sub-icon"></i>
+                <%elsif subls[x].result == "failure"%>
+                    <i class="fa fa-times sub-icon"></i>
+                <%end%>
+              </div>
+            </div>
+          </div>
+
+
+        <% end %>
+        <% x = x+1 %>
+
+  <%end %>
+</div>

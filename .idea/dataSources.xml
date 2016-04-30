@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="14616179">
+  <component name="DataSourceManagerImpl" format="xml" hash="3298289808">
     <data-source source="LOCAL" name="Rails Judicatum: test" uuid="23da7e58-f613-40f4-aa67-d02620cf0a77">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

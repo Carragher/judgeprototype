@@ -1,5 +1,5 @@
 
-
+#layout "application"
 
 class UsersController < ApplicationController
   before_filter :save_login_state, :only => [:new, :create]
@@ -18,13 +18,12 @@ class UsersController < ApplicationController
     user_params[:role] = "student"
     @user = User.new(user_params)
     @user.role = "student"
+   # puts @user.username
 
     if @user.save
-      flash[:notice] = "Success"
-      flash[:color] = "valid"
+
     else
-      flash[:notice] = "failure"
-      flash[:color] = "invalid"
+
     end
     redirect_to(:controller => 'sessions', :action => 'profile')
     #render "new"

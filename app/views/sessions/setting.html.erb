@@ -1,8 +1,23 @@
-<h1>Solution submit</h1>
 
-  <%= form_for(:user, :url => {:controller => 'sessions', :action => 'setting'}) do |f| %>
-    <p> Select your OS<br><%= f.select :os, options_for_select([["Windows", "w"], ["Linux", "L"]]) %> </p>
-    <p> Problem #TODO ComboBox, kinda requires problem db up and running <br> <%= f.text_field :problem%> </p>
-    <p> Code<br><%= f.text_area :code, size: "30x10" %> </p>
-  <%= f.submit :submit %>
-  <% end %>
+<div style="padding-top: 100px; padding-bottom: 200px;">
+  <div class= "Sign_Form submit-div " >
+    <h1>Solution Submit</h1>
+
+    <%@client = JenkinsApi::Client.new(:server_ip => '127.0.0.1',
+    :username => '', :password => '')%>
+
+      <%= form_for(:subl, :url => {:controller => 'sessions', :action => 'create_subl'}) do |f| %>
+        <p><h4 class="login-text">Select your Language</h4> <%= f.select( :job, @client.job.list_all.sort ,{}, { :class => "btn btn-default dropdown-toggle"}) %> </p>
+        <p><h4 class="login-text">Problem #TODO ComboBox, kinda requires problem db up and running</h4> <%= f.select :problemId, Problem.all.ids ,  class:'form-control login-input'%> </p>
+        <p><h4 class="login-text">Code</h4> <%= f.text_area :code, size: "30x10", class:'form-control submit-textarea' %> </p>
+        <div  class=" login-btn">
+          <%= f.submit :Submit, class: "btn btn-default btn-color" %>
+        </div>
+      <% end %>
+  </div>
+</div>
+
+
+
+
+
